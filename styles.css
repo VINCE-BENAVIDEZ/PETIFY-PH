@@ -1257,3 +1257,34 @@ body { overflow-x: hidden; }
     padding-right: max(clamp(1rem, 4vw, 2rem), env(safe-area-inset-right));
   }
 }
+
+/* Verify search: keep the action as a separate button, not inside the field. */
+.verify__form {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.verify__form input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.verify__form .btn {
+  flex: 0 0 auto;
+  align-self: stretch;
+}
+
+.verify__form:focus-within {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.verify__form input:focus {
+  border-color: var(--petify-sky);
+  box-shadow: 0 0 0 4px rgba(119, 200, 233, 0.2), var(--shadow-card);
+}
