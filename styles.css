@@ -895,6 +895,7 @@ body {
   width: 166px;
   height: 43px;
   background: url("../../LOGO.png") center / contain no-repeat;
+  background: url("assets/petify-logo.png") center / contain no-repeat;
 }
 .nav__mark svg { display: none; }
 .nav__logo .nav__word {
@@ -996,6 +997,7 @@ body {
   height: 43px;
   margin-bottom: 0.85rem;
   background: url("../../LOGO.png") left center / contain no-repeat;
+  background: url("assets/petify-logo.png") left center / contain no-repeat;
   font-size: 0;
 }
 .footer__links a:hover { color: var(--petify-red); }
@@ -1150,7 +1152,16 @@ body { overflow-x: hidden; }
   width: clamp(165px, 22vw, 230px);
   height: clamp(46px, 5.9vw, 62px);
   background-size: 100% auto;
+  background-image: url("assets/petify-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  flex: 0 0 auto;
+  visibility: visible;
+  opacity: 1;
 }
+
+.nav__logo { flex: 0 0 auto; }
 
 .btn,
 .nav__burger,
