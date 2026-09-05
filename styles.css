@@ -1102,6 +1102,7 @@ main > #verify {
 
 /* Hero visual: keep the family-and-pet photo only. */
 .hero__id-card { display: none; }
+<<<<<<< HEAD
 
 /* =========================================================
    Device-responsive layout system
@@ -1288,3 +1289,5 @@ body { overflow-x: hidden; }
   border-color: var(--petify-sky);
   box-shadow: 0 0 0 4px rgba(119, 200, 233, 0.2), var(--shadow-card);
 }
+=======
+>>>>>>> 4918b47903b2472c5a577e11179c104940bcda53
