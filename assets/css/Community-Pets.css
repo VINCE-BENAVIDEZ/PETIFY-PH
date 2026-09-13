@@ -894,7 +894,7 @@ body {
 .nav__mark {
   width: 166px;
   height: 43px;
-  background: url("assets/petify-logo.png") center / contain no-repeat;
+  background: url("../img/petify-logo.png") center / contain no-repeat;
 }
 .nav__mark svg { display: none; }
 .nav__logo .nav__word {
@@ -995,7 +995,7 @@ body {
   width: 166px;
   height: 43px;
   margin-bottom: 0.85rem;
-  background: url("assets/petify-logo.png") left center / contain no-repeat;
+  background: url("../img/petify-logo.png") left center / contain no-repeat;
   font-size: 0;
 }
 .footer__links a:hover { color: var(--petify-red); }
@@ -1150,7 +1150,7 @@ body { overflow-x: hidden; }
   width: clamp(165px, 22vw, 230px);
   height: clamp(46px, 5.9vw, 62px);
   background-size: 100% auto;
-  background-image: url("assets/petify-logo.png");
+  background-image: url("../img/petify-logo.png");
   background-position: center;
   background-repeat: no-repeat;
   display: block;
@@ -1452,4 +1452,73 @@ p,
 @media (hover: none) {
   .btn:hover,
   .p-card:hover { transform: none; }
+}
+
+/* =========================================================
+   Stray gallery page
+   ========================================================= */
+.stray-gallery {
+  flex: 1;
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+  background:
+    linear-gradient(110deg, rgba(119, 200, 233, 0.1), transparent 36%),
+    var(--bg);
+}
+
+.stray-gallery__head {
+  max-width: 44rem;
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.stray-gallery__eyebrow {
+  margin-bottom: 0.65rem;
+  color: var(--petify-blue);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stray-gallery__head h1 {
+  margin-bottom: 0.8rem;
+  font-size: var(--fs-h2);
+}
+
+.stray-gallery__head > p:last-child {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.stray-gallery__grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.stray-gallery__item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--accent-tint);
+}
+
+.stray-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s var(--ease);
+}
+
+@media (hover: hover) {
+  .stray-gallery__item:hover img { transform: scale(1.04); }
+}
+
+@media (max-width: 700px) {
+  .stray-gallery__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 420px) {
+  .stray-gallery__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stray-gallery__head > p:last-child { font-size: 1rem; }
 }

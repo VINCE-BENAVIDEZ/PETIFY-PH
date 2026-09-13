@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
@@ -28,10 +28,10 @@
     </a>
 
     <nav class="nav__links" aria-label="Primary">
-      <a href="#top">Home</a>
-      <a href="#verify">Verify PETIFY ID</a>
-      <a href="#community">Users</a>
-      <a href="#stray-cats">Stray</a>
+      <a href="#top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Home</a>
+      <a href="#verify">Verify ID</a>
+      <a href="#Members">Members</a>
+      <a href="#Community-Pets">Community Pets</a>
       <a href="#why">About</a>
     </nav>
 
@@ -44,27 +44,47 @@
   </div>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#top">Home</a>
-    <a href="#verify">Verify PETIFY ID</a>
-    <a href="#community">Users</a>
-    <a href="#stray-cats">Stray</a>
+    <a href="#top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Home</a>
+    <a href="#verify">Verify ID</a>
+    <a href="#community">Members</a>
+    <a href="#Community-Pets">Community Pets</a>
     <a href="#why">About</a>
     <button class="btn btn--primary" data-open-modal="signup">Sign up</button>
   </div>
 </header>
 
 <main>
+  <!-- ============ VERIFY PANEL ============ -->
+  <section class="section section--tint" id="verify">
+    <div class="section__inner verify">
+      <div class="verify__head">
+        <h2>Verify ID</h2>
+        <p>Verify a PETIFY ID to access the registered information associated with a pet.</p>
+      </div>
+
+      <form class="verify__form" id="verifyForm" autocomplete="off">
+        <label for="petifyIdInput" class="sr-only">Enter PETIFY ID</label>
+        <input type="text" id="petifyIdInput" name="petifyId" placeholder="Enter PETIFY ID — e.g. 1234-5678-91011" />
+        <button type="submit" class="btn btn--primary">Verify ID</button>
+      </form>
+      <p class="verify__hint" id="verifyHint">Try <button type="button" class="link-btn" data-fill-id="1234-5678-91011">1234-5678-91011</button> or <button type="button" class="link-btn" data-fill-id="1213-1415-1617">1213-1415-1617</button> to see a sample result.</p>
+
+      <div class="verify__result" id="verifyResult" hidden>
+        <!-- populated by script.js -->
+      </div>
+    </div>
+  </section>
 
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="hero__inner">
       <div class="hero__copy">
-        <p class="hero__tag">Every pet deserves an identity.</p>
+        <h2>Every pet deserves an identity.</h2>
         <h1 class="hero__headline">They are not just pets, they are part of our family.</h1>
-        <p class="hero__sub">PETIFY gives your pet a permanent physical and digital identity, keeping their most important information accessible and helping them find their way home.</p>
+        <p class="hero__sub">PETIFY gives your pet a permanent physical and digital identity, keeping their most important information accessible and helping them and keep them safe.</p>
         <div class="hero__actions">
           <button class="btn btn--primary" data-open-modal="signup">Sign up</button>
-          <a href="#verify" class="btn btn--ghost">Verify PETIFY ID</a>
+          <a href="#verify" class="btn btn--ghost">Verify ID</a>
         </div>
         <div class="hero__trust">
           <div class="hero__trust-item">
@@ -86,7 +106,7 @@
         <div class="hero__id-card">
           <div class="hero__id-card-top">
             <span class="hero__id-card-status">Active</span>
-            <span class="hero__id-card-num">PTF-482913</span>
+            <span class="hero__id-card-num">1234-5678-91011</span>
           </div>
           <p class="hero__id-card-name">Maple</p>
           <p class="hero__id-card-meta">Golden Retriever · 3 yrs</p>
@@ -133,33 +153,11 @@
       </div>
     </div>
   </section>
-
-  <!-- ============ VERIFY PANEL ============ -->
-  <section class="section section--tint" id="verify">
-    <div class="section__inner verify">
-      <div class="verify__head">
-        <h2>Verify PETIFY ID</h2>
-        <p>Verify a PETIFY ID to access the registered information associated with a pet.</p>
-      </div>
-
-      <form class="verify__form" id="verifyForm" autocomplete="off">
-        <label for="petifyIdInput" class="sr-only">Enter PETIFY ID</label>
-        <input type="text" id="petifyIdInput" name="petifyId" placeholder="Enter PETIFY ID — e.g. PTF-482913" />
-        <button type="submit" class="btn btn--primary">Verify ID</button>
-      </form>
-      <p class="verify__hint" id="verifyHint">Try <button type="button" class="link-btn" data-fill-id="PTF-482913">PTF-482913</button> or <button type="button" class="link-btn" data-fill-id="PTF-119042">PTF-119042</button> to see a sample result.</p>
-
-      <div class="verify__result" id="verifyResult" hidden>
-        <!-- populated by script.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ COMMUNITY ============ -->
-  <section class="section" id="community">
+  <!-- ============ MEMBERS ============ -->
+  <section class="section" id="Members">
     <div class="section__inner">
       <div class="section__head">
-        <h2>PETIFY community</h2>
+        <h2>PETIFY Members</h2>
         <p>Meet the growing community of pet owners protecting their companions with PETIFY.</p>
       </div>
 
@@ -168,17 +166,17 @@
       </div>
 
       <div class="section__cta-row">
-        <button class="btn btn--outline">View all users</button>
+        <a href="PETIFY-Members.html" class="btn btn--outline">View all Members</a>
       </div>
     </div>
   </section>
 
   <!-- ============ STRAY ============ -->
-  <section class="section section--tint" id="stray-cats">
+  <section class="section section--tint" id="Community-Pets">
     <div class="section__inner">
       <div class="section__head">
-        <h2>Stray</h2>
-        <p>Explore a friendly mix of dogs, cats, and small wildlife from the PETIFY community.</p>
+        <h2>Community Pets</h2>
+        <p>Help us identify and keep track of community pets all around the country. Together, we can help keep them safe and give them the identity they deserve.</p>
       </div>
 
       <div class="card-grid card-grid--cats" id="catsGrid">
@@ -186,7 +184,7 @@
       </div>
 
       <div class="section__cta-row">
-        <button class="btn btn--outline">View stray</button>
+        <a href="Community-Pets.html" class="btn btn--outline">View Community Pets</a>
       </div>
     </div>
   </section>
@@ -226,7 +224,7 @@
       <p>Register your pet with PETIFY and keep their identity connected to the family they belong to.</p>
       <div class="cta__actions">
         <button class="btn btn--on-dark" data-open-modal="signup">Sign up</button>
-        <a href="#verify" class="btn btn--ghost-on-dark">Verify PETIFY ID</a>
+        <a href="#verify" class="btn btn--ghost-on-dark">Verify ID</a>
       </div>
     </div>
   </section>
@@ -247,14 +245,14 @@
   <div class="footer__inner">
     <div class="footer__brand">
       <span class="nav__word footer__word">PETIFY</span>
-      <p>"They are not just pets, they are part of our family."</p>
+      <h2>"They are not just pets, they are part of our family."</h2>
     </div>
 
     <nav class="footer__links" aria-label="Footer">
-      <a href="#top">Home</a>
-      <a href="#verify">Verify PETIFY ID</a>
-      <a href="#community">Users</a>
-      <a href="#stray-cats">Stray</a>
+      <a href="#top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Home</a>
+      <a href="#verify">Verify ID</a>
+      <a href="#community">Members</a>
+      <a href="#Community-Pets">Community Pets</a>
       <a href="#why">About</a>
       <a href="#contact">Contact</a>
       <a href="#">Privacy Policy</a>
@@ -312,6 +310,6 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
