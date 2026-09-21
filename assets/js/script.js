@@ -123,7 +123,7 @@
   /* ---------- Modals ---------- */
 
   const overlay = $('#modalOverlay');
-  const modals = { signup: $('#signupModal'), contact: $('#contactModal') };
+  const modals = { contact: $('#contactModal') };
 
   function openModal(name) {
     const modal = modals[name];

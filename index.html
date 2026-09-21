@@ -36,7 +36,7 @@
     </nav>
 
     <div class="nav__actions">
-      <button class="btn btn--primary btn--sm" data-open-modal="signup">Sign up</button>
+      <button class="btn btn--primary" onclick="window.location.href='signup.html'">Sign up</button>
       <button class="nav__burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -49,7 +49,7 @@
     <a href="#community">Members</a>
     <a href="#Community-Pets">Community Pets</a>
     <a href="#why">About</a>
-    <button class="btn btn--primary" data-open-modal="signup">Sign up</button>
+    <button class="btn btn--primary" onclick="window.location.href='signup.html'">Sign up</button>
   </div>
 </header>
 
@@ -80,10 +80,10 @@
     <div class="hero__inner">
       <div class="hero__copy">
         <h2>Every pet deserves an identity.</h2>
-        <h1 class="hero__headline">They are not just pets, they are part of our family.</h1>
+        <h1 class="hero__headline">They're not just pets, they are part of our family.</h1>
         <p class="hero__sub">PETIFY gives your pet a permanent physical and digital identity, keeping their most important information accessible and helping them and keep them safe.</p>
         <div class="hero__actions">
-          <button class="btn btn--primary" data-open-modal="signup">Sign up</button>
+          <button class="btn btn--primary" onclick="window.location.href='signup.html'">Sign up</button>
           <a href="#verify" class="btn btn--ghost">Verify ID</a>
         </div>
         <div class="hero__trust">
@@ -223,7 +223,7 @@
       <h2>Give them an identity. Give them a way home.</h2>
       <p>Register your pet with PETIFY and keep their identity connected to the family they belong to.</p>
       <div class="cta__actions">
-        <button class="btn btn--on-dark" data-open-modal="signup">Sign up</button>
+        <button class="btn btn--primary" onclick="window.location.href='signup.html'">Sign up</button>
         <a href="#verify" class="btn btn--ghost-on-dark">Verify ID</a>
       </div>
     </div>
@@ -237,7 +237,6 @@
       <button class="btn btn--primary" data-open-modal="contact">Reach out to us</button>
     </div>
   </section>
-
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -245,7 +244,7 @@
   <div class="footer__inner">
     <div class="footer__brand">
       <span class="nav__word footer__word">PETIFY</span>
-      <h2>"They are not just pets, they are part of our family."</h2>
+      <h2>"They're not just pets, they are part of our family."</h2>
     </div>
 
     <nav class="footer__links" aria-label="Footer">
@@ -263,28 +262,9 @@
     <p>© 2026 PETIFY. All rights reserved.</p>
   </div>
 </footer>
-
-<!-- ============ MODALS ============ -->
+<!--- overlay modal --->
 <div class="modal-overlay" id="modalOverlay">
-
-  <div class="modal" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="signupTitle" hidden>
-    <button class="modal__close" data-close-modal aria-label="Close">×</button>
-    <h3 id="signupTitle">Register your pet</h3>
-    <p>Create your account to give your pet a PETIFY ID.</p>
-    <form class="modal__form" data-demo-form>
-      <label>Your name
-        <input type="text" name="name" placeholder="Jamie Alcaraz" required>
-      </label>
-      <label>Email
-        <input type="email" name="email" placeholder="jamie@email.com" required>
-      </label>
-      <label>Pet's name
-        <input type="text" name="petName" placeholder="Maple" required>
-      </label>
-      <button type="submit" class="btn btn--primary btn--full">Create account</button>
-    </form>
-  </div>
-
+  
   <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle" hidden>
     <button class="modal__close" data-close-modal aria-label="Close">×</button>
     <h3 id="contactTitle">Reach out to us</h3>
@@ -307,7 +287,6 @@
   </div>
 
 </div>
-
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="assets/js/script.js"></script>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Your Pet — PETIFY</title>
+<meta name="description" content="Register your pet with PETIFY: pet details, medical records, and pet parent information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/Community-Pets.css">
+<link rel="stylesheet" href="assets/css/Signup.css">
+</head>
+<body class="stray-page">
+
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a href="index.html#top" class="nav__logo" aria-label="PETIFY home">
+      <span class="nav__mark" aria-hidden="true"></span>
+      <span class="nav__word">PETIFY</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#verify">Verify ID</a>
+      <a href="PETIFY-Members.html">Members</a>
+      <a href="Community-Pets.html">Community Pets</a>
+      <a href="index.html#why">About</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="index.html#top" class="btn btn--primary btn--sm">Home</a>
+      <button class="nav__burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#top">Home</a>
+    <a href="index.html#verify">Verify ID</a>
+    <a href="index.html#community">Users</a>
+    <a href="Community-Pets.html">Community Pets</a>
+    <a href="index.html#why">About</a>
+  </div>
+</header>
+
+<main>
+<!--- main Goes Here --->
+<section class="reg">
+  <div class="reg__inner">
+
+    <header class="reg__head">
+      <h1 class="reg__title">Register your pet</h1>
+      <p class="reg__sub">Fill in your pet's profile once and we'll keep it on file. Anything you're unsure about, an estimate is fine — you can edit it later.</p>
+    </header>
+
+    <form class="reg__form" id="petForm" novalidate>
+
+      <!-- Photo upload -->
+      <section class="reg__card reg__card--photo" role="group" aria-labelledby="secPhoto">
+        <h2 class="reg__legend" id="secPhoto">
+          <img class="reg__icon" src="img/icon-photo.png" alt="">Pet photo
+        </h2>
+
+        <div class="photo">
+          <label class="photo__drop" for="petPhoto" id="photoDrop">
+            <img class="photo__preview" id="photoPreview" alt="" hidden>
+            <span class="photo__placeholder" id="photoPlaceholder">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="photo__icon">
+                <path d="M12 16V5m0 0L8 9m4-4 4 4M5 17v1a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-1"
+                      fill="none" stroke="currentColor" stroke-width="1.8"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <strong>Add a photo</strong>
+              <small>Click or drop an image here — JPG or PNG, up to 5&nbsp;MB</small>
+            </span>
+            <input type="file" id="petPhoto" name="pet-photo" accept="image/png, image/jpeg, image/webp" class="photo__input">
+          </label>
+
+          <div class="photo__side">
+            <p class="photo__tip">A clear, front-facing photo in daylight helps neighbours recognise your pet if they ever go missing.</p>
+            <button type="button" class="reg__ghost" id="photoClear" hidden>Remove photo</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pet details -->
+      <section class="reg__card" role="group" aria-labelledby="secPet">
+        <h2 class="reg__legend" id="secPet">
+          <img class="reg__icon" src="img/icon-pet.png" alt="">Pet details
+        </h2>
+
+        <div class="reg__grid">
+          <p class="field">
+            <label for="petName">Name</label>
+            <input type="text" id="petName" name="pet-name" placeholder="Biscuit" autocomplete="off" required>
+          </p>
+
+          <p class="field">
+            <label for="petDob">Date of birth <span class="field__note">an estimate is fine</span></label>
+            <input type="date" id="petDob" name="pet-dob" required>
+          </p>
+
+          <p class="field">
+            <label for="petGender">Gender</label>
+            <select id="petGender" name="pet-gender" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Unknown</option>
+            </select>
+          </p>
+
+          <p class="field">
+            <label for="petColor">Color</label>
+            <input type="text" id="petColor" name="pet-color" placeholder="Brown and white" required>
+          </p>
+
+          <p class="field field--wide">
+            <label for="petBreed">Breed</label>
+            <input type="text" id="petBreed" name="pet-breed" placeholder="Golden retriever, or mixed" required>
+          </p>
+        </div>
+      </section>
+
+      <!-- Medical details -->
+      <section class="reg__card" role="group" aria-labelledby="secMed">
+        <h2 class="reg__legend" id="secMed">
+          <img class="reg__icon" src="img/icon-medical.png" alt="">Medical details
+        </h2>
+
+        <div class="reg__grid">
+          <p class="field">
+            <label for="petNeutered">Neutered or spayed</label>
+            <select id="petNeutered" name="pet-neutered" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Not sure</option>
+            </select>
+          </p>
+
+          <p class="field">
+            <label for="petVaccine">Vaccines <span class="field__note">and last shot date</span></label>
+            <input type="text" id="petVaccine" name="pet-vaccine" placeholder="Rabies, 5-in-1 — March 2026">
+          </p>
+
+          <p class="field field--wide">
+            <label for="petAllergies">Allergies</label>
+            <input type="text" id="petAllergies" name="pet-allergies" placeholder="Chicken, flea treatment — or write None">
+          </p>
+
+          <p class="field field--wide">
+            <label for="petConditions">Unique conditions</label>
+            <textarea id="petConditions" name="pet-conditions" rows="3"
+              placeholder="Anything a vet or a finder should know — medication, blind in one eye, anxious around strangers"></textarea>
+          </p>
+        </div>
+      </section>
+
+      <!-- Pet parent details -->
+      <section class="reg__card" role="group" aria-labelledby="secParent">
+        <h2 class="reg__legend" id="secParent">
+          <img class="reg__icon" src="img/icon-parent.png" alt="">Pet parent details
+        </h2>
+
+        <div class="reg__grid">
+          <p class="field">
+            <label for="ownerName">Name</label>
+            <input type="text" id="ownerName" name="owner-name" placeholder="Your full name" autocomplete="name" required>
+          </p>
+
+          <p class="field">
+            <label for="ownerPhone">Contact number</label>
+            <input type="tel" id="ownerPhone" name="owner-phone" placeholder="09XX XXX XXXX" autocomplete="tel" required>
+          </p>
+
+          <p class="field field--wide">
+            <label for="ownerAddress">Address</label>
+            <input type="text" id="ownerAddress" name="owner-address" placeholder="House no., street, barangay, city" autocomplete="street-address" required>
+          </p>
+        </div>
+      </section>
+
+      <!-- Terms + submit -->
+      <div class="reg__submit">
+        <label class="check" for="terms">
+          <input type="checkbox" id="terms" name="terms" required>
+          <span class="check__box" aria-hidden="true"></span>
+          <span class="check__text">I agree to the <a href="#" class="check__link">terms and conditions</a> and the <a href="#" class="check__link">privacy policy</a>.</span>
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--full reg__button">Register pet</button>
+        <p class="reg__foot">You can update or delete this profile any time from your PETIFY account.</p>
+      </div>
+
+    </form>
+  </div>
+</section>
+<!--- main Ends Here --->
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="nav__word footer__word">PETIFY</span>
+      <h2>"They're not just pets, they are part of our family."</h2>
+    </div>
+
+    <nav class="footer__links" aria-label="Footer">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#verify">Verify ID</a>
+      <a href="PETIFY-Members.html">Members</a>
+      <a href="Community-Pets.html">Community Pets</a>
+      <a href="index.html#why">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </nav>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 PETIFY. All rights reserved.</p>
+  </div>
+</footer>
+<script src="assets/css/styles.css"></script>
+<script src="assets/css/Signup.css"></script>
+</body>
+</html>
