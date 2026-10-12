@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tintin's Profile — PETIFY</title>
+  <meta name="description" content="A PETIFY pet profile with identity, health, pet parent, and photo information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/template.css">
+</head>
+<body class="pet-profile-page">
+
+  <!-- Shared PETIFY header -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="index.html#top" class="nav__logo" aria-label="PETIFY home">
+        <span class="nav__mark" aria-hidden="true"></span>
+        <span class="nav__word">PETIFY</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#top">Home</a>
+        <a href="index.html#verify">Verify ID</a>
+        <a href="PETIFY-Members.html">Members</a>
+        <a href="Community-Pets.html">Community Pets</a>
+        <a href="index.html#why">About</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="Signup.html" class="btn btn--primary btn--sm">Sign up</a>
+        <button class="nav__burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#verify">Verify ID</a>
+      <a href="PETIFY-Members.html">Members</a>
+      <a href="Community-Pets.html">Community Pets</a>
+      <a href="index.html#why">About</a>
+      <a href="Signup.html" class="btn btn--primary">Sign up</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="profile-hero" aria-labelledby="profilePageTitle">
+      <div class="section__inner">
+        <div class="profile-page__intro">
+          <p class="profile-page__eyebrow">PETIFY pet profile</p>
+          <h1 id="profilePageTitle">Tintin's profile</h1>
+          <p>Keep the details that matter in one clear, caring place.</p>
+        </div>
+
+        <div class="pet-profile">
+          <div class="pet-profile__left-column">
+            <!-- Replace the photo source and PETIFY ID below for each pet. -->
+            <aside class="pet-identity" aria-label="Pet identity">
+              <p class="pet-identity__label">PETIFY ID</p>
+              <p class="pet-identity__number">PTF-0000-0000</p>
+
+              <div class="pet-identity__photo-wrap">
+                <div class="pet-identity__photo">
+                  <img src="https://placehold.co/800x800/E3EFFF/0747B8?text=Pet+Photo" alt="Placeholder for Tintin's profile photo">
+                </div>
+                <img class="pet-identity__verified" src="assets/img/verified-badge.png" alt="Verified PETIFY profile">
+              </div>
+
+              <p class="pet-identity__verified-text"><span aria-hidden="true">✓</span> VERIFIED</p>
+
+              <blockquote class="pet-identity__quote">“Hi, I’m Tintin!”</blockquote>
+            </aside>
+
+            <section class="pet-food-card" aria-labelledby="favoriteFoodTitle">
+              <div class="pet-food-card__head">
+                <span class="pet-food-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none"><path d="M7 14.5h18l-1.2 8.2a3.8 3.8 0 0 1-3.8 3.3h-8a3.8 3.8 0 0 1-3.8-3.3L7 14.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10.5 11.2c1.4-2 3.2-3 5.5-3s4.1 1 5.5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4.5 14.5h23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </span>
+                <div>
+                  <h2 id="favoriteFoodTitle">My favorite food and snack</h2>
+                  <p>Add Tintin’s favorite meal and treat.</p>
+                </div>
+              </div>
+              <div class="pet-food-card__items">
+                <p><span>Favorite food</span><strong>Add favorite food</strong></p>
+                <p><span>Favorite snack</span><strong>Add favorite snack</strong></p>
+              </div>
+            </section>
+
+            <section class="pet-location-card" aria-labelledby="locationCardTitle">
+              <div class="pet-location-card__head">
+                <span class="pet-location-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none"><path d="M16 28s8-7.8 8-15A8 8 0 1 0 8 13c0 7.2 8 15 8 15Z" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="13" r="2.75" stroke="currentColor" stroke-width="2"/></svg>
+                </span>
+                <div>
+                  <h2 id="locationCardTitle">I LIVE HERE</h2>
+                  <p data-parent-address>123 PETIFY Street, Quezon City, Philippines</p>
+                </div>
+              </div>
+
+              <div class="pet-location-card__map">
+                <iframe id="petLocationMap" title="Pet parent's address on Google Maps" src="https://www.google.com/maps?q=123+PETIFY+Street,+Quezon+City,+Philippines&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <a id="petDirectionsLink" class="btn btn--outline pet-location-card__directions" href="https://www.google.com/maps/dir/?api=1&origin=Current+Location&destination=123+PETIFY+Street,+Quezon+City,+Philippines" target="_blank" rel="noopener">Get Directions</a>
+              <p class="pet-location-card__hint">Google Maps may ask for your location. If it is unavailable, enter your starting point in Maps.</p>
+            </section>
+          </div>
+
+          <div class="pet-profile__details">
+            <!-- Edit the values in each definition list directly in this file. -->
+            <section class="profile-section" aria-labelledby="petInformationTitle">
+              <div class="profile-section__heading">
+                <span class="profile-section__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none">
+                    <path d="M16 4.5c-2.2 0-3.9 2.1-3.9 4.7s1.7 4.7 3.9 4.7 3.9-2.1 3.9-4.7S18.2 4.5 16 4.5Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M7.2 10.1c-1.9-.5-3.7.9-4.1 3.1-.4 2.2.9 4.2 2.9 4.6 1.9.4 3.7-.9 4.1-3.1.4-2.2-.9-4.2-2.9-4.6ZM24.8 10.1c1.9-.5 3.7.9 4.1 3.1.4 2.2-.9 4.2-2.9 4.6-1.9.4-3.7-.9-4.1-3.1-.4-2.2.9-4.2 2.9-4.6ZM16 15.2c-5 0-10.4 4.5-10.4 10.1 0 3.9 3.6 6.4 7.1 5.3 1.7-.5 2.2-.7 3.3-.7s1.6.2 3.3.7c3.5 1.1 7.1-1.4 7.1-5.3 0-5.6-5.4-10.1-10.4-10.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <h2 id="petInformationTitle">Pet information</h2>
+                  <p>Everyday details about your pet.</p>
+                </div>
+              </div>
+
+              <dl class="profile-fields">
+                <div class="profile-field"><dt>Name</dt><dd>Tintin</dd></div>
+                <div class="profile-field"><dt>Age</dt><dd><span class="profile-placeholder">Add age</span></dd></div>
+                <div class="profile-field"><dt>Gender</dt><dd><span class="profile-placeholder">Add gender</span></dd></div>
+                <div class="profile-field"><dt>Color</dt><dd><span class="profile-placeholder">Add color</span></dd></div>
+                <div class="profile-field"><dt>Breed</dt><dd><span class="profile-placeholder">Add breed</span></dd></div>
+              </dl>
+            </section>
+
+            <section class="profile-section" aria-labelledby="medicalDetailsTitle">
+              <div class="profile-section__heading">
+                <span class="profile-section__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none">
+                    <path d="M16 5v22M5 16h22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <rect x="3.5" y="3.5" width="25" height="25" rx="6" stroke="currentColor" stroke-width="1.8"/>
+                  </svg>
+                </span>
+                <div>
+                  <h2 id="medicalDetailsTitle">Medical details</h2>
+                  <p>Important care information for Tintin.</p>
+                </div>
+              </div>
+
+              <dl class="profile-fields">
+                <div class="profile-field"><dt>Neutered</dt><dd><span class="profile-placeholder">Add status</span></dd></div>
+                <div class="profile-field"><dt>Vaccination status</dt><dd><span class="profile-placeholder">Add status</span></dd></div>
+                <div class="profile-field"><dt>Allergies</dt><dd><span class="profile-placeholder">Add allergies</span></dd></div>
+                <div class="profile-field"><dt>Unique conditions</dt><dd><span class="profile-placeholder">Add conditions</span></dd></div>
+              </dl>
+            </section>
+
+            <section class="profile-section" aria-labelledby="petParentTitle">
+              <div class="profile-section__heading">
+                <span class="profile-section__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="10.5" r="5" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M6.5 27c.8-5.3 4.6-8.2 9.5-8.2s8.7 2.9 9.5 8.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <h2 id="petParentTitle">Pet parent details</h2>
+                  <p>How to reach the person who cares for Tintin.</p>
+                </div>
+              </div>
+
+              <dl class="profile-fields">
+                <div class="profile-field"><dt>Name</dt><dd><span class="profile-placeholder">Add parent name</span></dd></div>
+                <div class="profile-field"><dt>Contact number</dt><dd><a class="profile-link" data-parent-phone-display href="tel:+639000000000">+63 900 000 0000</a></dd></div>
+                <div class="profile-field"><dt>Address</dt><dd><span class="profile-placeholder" data-parent-address>123 PETIFY Street, Quezon City, Philippines</span></dd></div>
+                <div class="profile-field"><dt>Social media links</dt><dd><a class="profile-link" data-instagram-link href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/" target="_blank" rel="noopener">Instagram</a></dd></div>
+              </dl>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-gallery" aria-labelledby="profileGalleryTitle">
+      <div class="section__inner">
+        <div class="profile-gallery__head">
+          <p class="profile-page__eyebrow">PETIFY memories</p>
+          <h2 id="profileGalleryTitle">Tintin's photo gallery</h2>
+          <p>Five ready-to-replace photo slots for your pet's favorite moments.</p>
+        </div>
+
+        <!-- Replace each placeholder image source with a real pet photo. -->
+        <div class="profile-gallery__grid">
+          <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/EEF6FF/0747B8?text=Photo+1" alt="Placeholder photo slot 1"><figcaption>Photo 1</figcaption></figure>
+          <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/FFF4D7/8C6300?text=Photo+2" alt="Placeholder photo slot 2"><figcaption>Photo 2</figcaption></figure>
+          <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/E8F6ED/258043?text=Photo+3" alt="Placeholder photo slot 3"><figcaption>Photo 3</figcaption></figure>
+          <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/FFF0F1/E5232B?text=Photo+4" alt="Placeholder photo slot 4"><figcaption>Photo 4</figcaption></figure>
+          <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/F1EEFF/5A47A2?text=Photo+5" alt="Placeholder photo slot 5"><figcaption>Photo 5</figcaption></figure>
+        </div>
+
+        <aside class="emergency-contact" aria-labelledby="emergencyContactTitle">
+          <p class="emergency-contact__eyebrow">Emergency contact</p>
+          <h2 id="emergencyContactTitle">If you think I’m hurt or in need of medical care, please call my mom/dad. 🥺🐾</h2>
+          <a class="emergency-contact__phone" data-parent-phone-display href="tel:+639000000000">+63 900 000 0000</a>
+
+          <div class="emergency-contact__actions">
+            <a class="emergency-contact__action emergency-contact__action--call" data-parent-phone-link href="tel:+639000000000">
+              <span aria-hidden="true">☎</span> Call
+            </a>
+            <a class="emergency-contact__action emergency-contact__action--messenger" data-messenger-link href="https://m.me/YOUR_MESSENGER_USERNAME" target="_blank" rel="noopener">
+              <span aria-hidden="true">✦</span> Messenger
+            </a>
+            <a class="emergency-contact__action emergency-contact__action--instagram" data-instagram-link href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/" target="_blank" rel="noopener">
+              <span aria-hidden="true">◎</span> Instagram
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared PETIFY footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="nav__word footer__word">PETIFY</span>
+        <p>“They’re not just pets, they are part of our family.”</p>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html#top">Home</a>
+        <a href="index.html#verify">Verify ID</a>
+        <a href="PETIFY-Members.html">Members</a>
+        <a href="Community-Pets.html">Community Pets</a>
+        <a href="index.html#why">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 PETIFY. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      PET PARENT CONTACT CONFIGURATION
+      Replace these values once with the real contact details. The location
+      card, directions link, parent details, and emergency buttons update automatically.
+    */
+    const PETIFY_PROFILE_CONFIG = {
+      parentAddress: '123 PETIFY Street, Quezon City, Philippines',
+      phoneNumber: '+639000000000',
+      phoneDisplay: '+63 900 000 0000',
+      messengerUrl: 'https://m.me/YOUR_MESSENGER_USERNAME',
+      instagramUrl: 'https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/'
+    };
+
+    (() => {
+      const config = PETIFY_PROFILE_CONFIG;
+      const destination = encodeURIComponent(config.parentAddress);
+      const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=Current%20Location&destination=${destination}`;
+
+      document.querySelectorAll('[data-parent-address]').forEach((element) => {
+        element.textContent = config.parentAddress;
+      });
+      document.querySelectorAll('[data-parent-phone-display]').forEach((element) => {
+        element.href = `tel:${config.phoneNumber}`;
+        element.textContent = config.phoneDisplay;
+      });
+      document.querySelectorAll('[data-parent-phone-link]').forEach((element) => {
+        element.href = `tel:${config.phoneNumber}`;
+      });
+      document.querySelectorAll('[data-messenger-link]').forEach((element) => {
+        element.href = config.messengerUrl;
+      });
+      document.querySelectorAll('[data-instagram-link]').forEach((element) => {
+        element.href = config.instagramUrl;
+      });
+
+      document.getElementById('petLocationMap').src = `https://www.google.com/maps?q=${destination}&z=15&output=embed`;
+      document.getElementById('petDirectionsLink').href = directionsUrl;
+    })();
+  </script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
