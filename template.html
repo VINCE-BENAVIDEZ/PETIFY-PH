@@ -71,9 +71,8 @@
 
             <section class="pet-food-card" aria-labelledby="favoriteFoodTitle">
               <div class="pet-food-card__head">
-                <span class="pet-food-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none"><path d="M7 14.5h18l-1.2 8.2a3.8 3.8 0 0 1-3.8 3.3h-8a3.8 3.8 0 0 1-3.8-3.3L7 14.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10.5 11.2c1.4-2 3.2-3 5.5-3s4.1 1 5.5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4.5 14.5h23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                </span>
+                <!-- Replace this image source with any square photo or icon. -->
+                <img class="content-card__icon" src="https://placehold.co/96x96/FFF4D7/8C6300?text=Food" alt="Food icon placeholder">
                 <div>
                   <h2 id="favoriteFoodTitle">My favorite food and snack</h2>
                   <p>Add Tintin’s favorite meal and treat.</p>
@@ -83,28 +82,22 @@
                 <p><span>Favorite food</span><strong>Add favorite food</strong></p>
                 <p><span>Favorite snack</span><strong>Add favorite snack</strong></p>
               </div>
-            </section>
 
-            <section class="pet-extra-card pet-extra-card--hobbies" aria-labelledby="hobbiesTitle">
-              <div class="pet-extra-card__head">
-                <span class="pet-extra-card__icon" aria-hidden="true">🐾</span>
-                <div>
-                  <h2 id="hobbiesTitle">My hobbies</h2>
-                  <p>Add Tintin’s favorite activities.</p>
+              <div class="pet-food-card__section" aria-labelledby="hobbiesTitle">
+                <h3 id="hobbiesTitle">My hobbies</h3>
+                <div class="pet-food-card__items">
+                  <p><span>Hobby 1</span><strong>Add a hobby</strong></p>
+                  <p><span>Hobby 2</span><strong>Add another hobby</strong></p>
                 </div>
               </div>
-              <p class="pet-extra-card__value">Add favorite hobbies</p>
-            </section>
 
-            <section class="pet-extra-card pet-extra-card--dislikes" aria-labelledby="dislikesTitle">
-              <div class="pet-extra-card__head">
-                <span class="pet-extra-card__icon" aria-hidden="true">😠</span>
-                <div>
-                  <h2 id="dislikesTitle">Things I hate 😠 🤢</h2>
-                  <p>Note what makes Tintin uncomfortable.</p>
+              <div class="pet-food-card__section" aria-labelledby="dislikesTitle">
+                <h3 id="dislikesTitle">Things I hate 😠 🤢</h3>
+                <div class="pet-food-card__items">
+                  <p><span>Dislike 1</span><strong>Add a dislike</strong></p>
+                  <p><span>Dislike 2</span><strong>Add another dislike</strong></p>
                 </div>
               </div>
-              <p class="pet-extra-card__value">Add dislikes</p>
             </section>
           </div>
 
@@ -112,12 +105,7 @@
             <!-- Edit the values in each definition list directly in this file. -->
             <section class="profile-section" aria-labelledby="petInformationTitle">
               <div class="profile-section__heading">
-                <span class="profile-section__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none">
-                    <path d="M16 4.5c-2.2 0-3.9 2.1-3.9 4.7s1.7 4.7 3.9 4.7 3.9-2.1 3.9-4.7S18.2 4.5 16 4.5Z" stroke="currentColor" stroke-width="1.8"/>
-                    <path d="M7.2 10.1c-1.9-.5-3.7.9-4.1 3.1-.4 2.2.9 4.2 2.9 4.6 1.9.4 3.7-.9 4.1-3.1.4-2.2-.9-4.2-2.9-4.6ZM24.8 10.1c1.9-.5 3.7.9 4.1 3.1.4 2.2-.9 4.2-2.9 4.6-1.9.4-3.7-.9-4.1-3.1-.4-2.2.9-4.2 2.9-4.6ZM16 15.2c-5 0-10.4 4.5-10.4 10.1 0 3.9 3.6 6.4 7.1 5.3 1.7-.5 2.2-.7 3.3-.7s1.6.2 3.3.7c3.5 1.1 7.1-1.4 7.1-5.3 0-5.6-5.4-10.1-10.4-10.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                  </svg>
-                </span>
+                <img class="content-card__icon" src="https://placehold.co/96x96/EAF4FF/0750AC?text=Pet" alt="Pet information icon placeholder">
                 <div>
                   <h2 id="petInformationTitle">Pet information</h2>
                   <p>Everyday details about your pet.</p>
@@ -135,12 +123,7 @@
 
             <section class="profile-section" aria-labelledby="medicalDetailsTitle">
               <div class="profile-section__heading">
-                <span class="profile-section__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none">
-                    <path d="M16 5v22M5 16h22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                    <rect x="3.5" y="3.5" width="25" height="25" rx="6" stroke="currentColor" stroke-width="1.8"/>
-                  </svg>
-                </span>
+                <img class="content-card__icon" src="https://placehold.co/96x96/E8F6ED/258043?text=Care" alt="Medical details icon placeholder">
                 <div>
                   <h2 id="medicalDetailsTitle">Medical details</h2>
                   <p>Important care information for Tintin.</p>
@@ -157,12 +140,7 @@
 
             <section class="profile-section" aria-labelledby="petParentTitle">
               <div class="profile-section__heading">
-                <span class="profile-section__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none">
-                    <circle cx="16" cy="10.5" r="5" stroke="currentColor" stroke-width="1.8"/>
-                    <path d="M6.5 27c.8-5.3 4.6-8.2 9.5-8.2s8.7 2.9 9.5 8.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                  </svg>
-                </span>
+                <img class="content-card__icon" src="https://placehold.co/96x96/FFF0F1/E5232B?text=Parent" alt="Pet parent icon placeholder">
                 <div>
                   <h2 id="petParentTitle">Pet parent details</h2>
                   <p>How to reach the person who cares for Tintin.</p>
@@ -175,25 +153,23 @@
                 <div class="profile-field"><dt>Address</dt><dd><span class="profile-placeholder" data-parent-address>123 PETIFY Street, Quezon City, Philippines</span></dd></div>
                 <div class="profile-field"><dt>Social media links</dt><dd><a class="profile-link" data-instagram-link href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/" target="_blank" rel="noopener">Instagram</a></dd></div>
               </dl>
-            </section>
 
-            <section class="pet-location-card" aria-labelledby="locationCardTitle">
-              <div class="pet-location-card__head">
-                <span class="pet-location-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none"><path d="M16 28s8-7.8 8-15A8 8 0 1 0 8 13c0 7.2 8 15 8 15Z" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="13" r="2.75" stroke="currentColor" stroke-width="2"/></svg>
-                </span>
+              <section class="profile-location" aria-labelledby="locationCardTitle">
+                <div class="profile-location__head">
+                  <img class="content-card__icon" src="https://placehold.co/96x96/FFF0F1/E5232B?text=Home" alt="Home location icon placeholder">
                 <div>
-                  <h2 id="locationCardTitle">I LIVE HERE</h2>
+                  <h3 id="locationCardTitle">I LIVE HERE</h3>
                   <p data-parent-address>123 PETIFY Street, Quezon City, Philippines</p>
                 </div>
               </div>
 
-              <div class="pet-location-card__map">
+              <div class="profile-location__map">
                 <iframe id="petLocationMap" title="Pet parent's address on Google Maps" src="https://www.google.com/maps?q=123+PETIFY+Street,+Quezon+City,+Philippines&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
 
-              <a id="petDirectionsLink" class="btn btn--outline pet-location-card__directions" href="https://www.google.com/maps/dir/?api=1&origin=Current+Location&destination=123+PETIFY+Street,+Quezon+City,+Philippines" target="_blank" rel="noopener">Get Directions</a>
-              <p class="pet-location-card__hint">Google Maps may ask for your location. If it is unavailable, enter your starting point in Maps.</p>
+                <a id="petDirectionsLink" class="btn btn--outline profile-location__directions" href="https://www.google.com/maps/dir/?api=1&origin=Current+Location&destination=123+PETIFY+Street,+Quezon+City,+Philippines" target="_blank" rel="noopener">Get Directions</a>
+                <p class="profile-location__hint">Google Maps may ask for your location. If it is unavailable, enter your starting point in Maps.</p>
+              </section>
             </section>
           </div>
         </div>
