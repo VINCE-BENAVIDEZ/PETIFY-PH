@@ -51,6 +51,9 @@
   align-items: start;
 }
 
+.pet-profile > *,
+.pet-profile__left-column > * { min-width: 0; }
+
 .pet-profile__left-column {
   display: grid;
   gap: clamp(1rem, 2vw, 1.35rem);
@@ -173,7 +176,7 @@
 
 .pet-food-card__head p {
   color: var(--ink-soft);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   line-height: 1.4;
 }
 
@@ -195,14 +198,14 @@
   display: block;
   margin-bottom: 0.1rem;
   color: var(--ink-faint);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   font-weight: 700;
 }
 
 .pet-food-card__items strong {
   display: block;
   color: var(--ink-soft);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 500;
   overflow-wrap: anywhere;
 }
@@ -240,8 +243,9 @@
 
 .profile-location__head p {
   color: var(--ink-soft);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 .profile-location__map {
@@ -268,7 +272,7 @@
 .profile-location__hint {
   margin-top: 0.6rem;
   color: var(--ink-faint);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   line-height: 1.45;
 }
 
@@ -389,7 +393,7 @@
   border-radius: 99px;
   color: #fff;
   background: rgba(19, 33, 63, 0.7);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
@@ -462,20 +466,46 @@
 @media (max-width: 900px) {
   .pet-profile { grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.45fr); }
   .profile-gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-fields { gap: 0.7rem 0.75rem; }
+  .profile-field { padding: 0.7rem 0.75rem; }
+  .profile-field dd { font-size: 0.9rem; }
 }
 
 @media (max-width: 700px) {
   .pet-profile { grid-template-columns: 1fr; }
   .pet-profile__left-column { width: 100%; max-width: 28rem; margin-inline: auto; }
   .profile-gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* Pet Information & other detail cards: keep the 2-column desktop look, scaled down */
+  .profile-section__heading { gap: 0.7rem; margin-bottom: 1rem; }
+  .profile-section__heading h2 { font-size: 1.05rem; }
+  .profile-section__heading p { font-size: 0.85rem; }
+  .content-card__icon { width: 2.2rem; height: 2.2rem; }
+  .profile-fields { gap: 0.55rem; }
+  .profile-field { padding: 0.6rem 0.65rem; }
+  .profile-field dt { font-size: 0.72rem; }
+  .profile-field dd { font-size: 0.88rem; }
 }
 
 @media (max-width: 440px) {
   .profile-hero,
   .profile-gallery { padding-block: 3rem; }
-  .profile-fields { grid-template-columns: 1fr; }
+  .pet-profile__details { padding: 1rem; }
+  .content-card__icon { width: 2rem; height: 2rem; border-radius: 0.55rem; }
+  .profile-fields { gap: 0.5rem; }
+  .profile-field { padding: 0.55rem 0.6rem; }
+  .profile-field dt { font-size: 0.7rem; }
+  .profile-field dd { font-size: 0.84rem; }
+  /* long address would be squeezed into a half-width cell */
+  .profile-field:has([data-parent-address]) { grid-column: 1 / -1; }
+  .profile-gallery__head h2 { font-size: clamp(1.5rem, 7vw, 1.8rem); }
   .profile-gallery__grid { gap: 0.7rem; }
   .emergency-contact__actions { flex-direction: column; }
   .emergency-contact__action { width: 100%; }
   .pet-identity__verified { width: 3.5rem; height: 3.5rem; right: -0.7rem; bottom: -0.7rem; }
+}
+
+/* Very narrow phones only: a single column avoids unreadably tight cells */
+@media (max-width: 340px) {
+  .profile-fields { grid-template-columns: 1fr; }
 }
