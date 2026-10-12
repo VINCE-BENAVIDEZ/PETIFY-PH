@@ -513,8 +513,13 @@
 /* =========================================================
    Photo pop-up (works with pop-up.js)
    ========================================================= */
+.pet-identity__photo img,
+.profile-gallery__item,
+.profile-gallery__item img,
 img[data-popup] { cursor: zoom-in; }
 
+.pet-identity__photo img:focus-visible,
+.profile-gallery__item img:focus-visible,
 img[data-popup]:focus-visible {
   outline: 3px solid var(--petify-blue, #0747b8);
   outline-offset: 3px;
@@ -581,6 +586,20 @@ body.photo-popup-open { overflow: hidden; }
 .photo-popup__close svg { width: 1.5rem; height: 1.5rem; }
 .photo-popup__close:hover { transform: scale(1.08); filter: brightness(0.92); }
 .photo-popup__close:focus-visible { outline: 3px solid #ffc516; outline-offset: 3px; }
+
+/* Shown only if an online photo link can't be loaded */
+.photo-popup__error {
+  max-width: 28rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md, 10px);
+  color: var(--ink, #13213f);
+  background: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.photo-popup__img[hidden],
+.photo-popup__error[hidden] { display: none; }
 
 @media (max-width: 440px) {
   .photo-popup__close { width: 3rem; height: 3rem; }
