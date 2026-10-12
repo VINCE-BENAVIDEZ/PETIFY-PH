@@ -48,14 +48,8 @@
   </header>
 
   <main>
-    <section class="profile-hero" aria-labelledby="profilePageTitle">
+    <section class="profile-hero" aria-label="Tintin pet profile">
       <div class="section__inner">
-        <div class="profile-page__intro">
-          <p class="profile-page__eyebrow">PETIFY pet profile</p>
-          <h1 id="profilePageTitle">Tintin's profile</h1>
-          <p>Keep the details that matter in one clear, caring place.</p>
-        </div>
-
         <div class="pet-profile">
           <div class="pet-profile__left-column">
             <!-- Replace the photo source and PETIFY ID below for each pet. -->
@@ -91,23 +85,26 @@
               </div>
             </section>
 
-            <section class="pet-location-card" aria-labelledby="locationCardTitle">
-              <div class="pet-location-card__head">
-                <span class="pet-location-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none"><path d="M16 28s8-7.8 8-15A8 8 0 1 0 8 13c0 7.2 8 15 8 15Z" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="13" r="2.75" stroke="currentColor" stroke-width="2"/></svg>
-                </span>
+            <section class="pet-extra-card pet-extra-card--hobbies" aria-labelledby="hobbiesTitle">
+              <div class="pet-extra-card__head">
+                <span class="pet-extra-card__icon" aria-hidden="true">🐾</span>
                 <div>
-                  <h2 id="locationCardTitle">I LIVE HERE</h2>
-                  <p data-parent-address>123 PETIFY Street, Quezon City, Philippines</p>
+                  <h2 id="hobbiesTitle">My hobbies</h2>
+                  <p>Add Tintin’s favorite activities.</p>
                 </div>
               </div>
+              <p class="pet-extra-card__value">Add favorite hobbies</p>
+            </section>
 
-              <div class="pet-location-card__map">
-                <iframe id="petLocationMap" title="Pet parent's address on Google Maps" src="https://www.google.com/maps?q=123+PETIFY+Street,+Quezon+City,+Philippines&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <section class="pet-extra-card pet-extra-card--dislikes" aria-labelledby="dislikesTitle">
+              <div class="pet-extra-card__head">
+                <span class="pet-extra-card__icon" aria-hidden="true">😠</span>
+                <div>
+                  <h2 id="dislikesTitle">Things I hate 😠 🤢</h2>
+                  <p>Note what makes Tintin uncomfortable.</p>
+                </div>
               </div>
-
-              <a id="petDirectionsLink" class="btn btn--outline pet-location-card__directions" href="https://www.google.com/maps/dir/?api=1&origin=Current+Location&destination=123+PETIFY+Street,+Quezon+City,+Philippines" target="_blank" rel="noopener">Get Directions</a>
-              <p class="pet-location-card__hint">Google Maps may ask for your location. If it is unavailable, enter your starting point in Maps.</p>
+              <p class="pet-extra-card__value">Add dislikes</p>
             </section>
           </div>
 
@@ -179,6 +176,25 @@
                 <div class="profile-field"><dt>Social media links</dt><dd><a class="profile-link" data-instagram-link href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/" target="_blank" rel="noopener">Instagram</a></dd></div>
               </dl>
             </section>
+
+            <section class="pet-location-card" aria-labelledby="locationCardTitle">
+              <div class="pet-location-card__head">
+                <span class="pet-location-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none"><path d="M16 28s8-7.8 8-15A8 8 0 1 0 8 13c0 7.2 8 15 8 15Z" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="13" r="2.75" stroke="currentColor" stroke-width="2"/></svg>
+                </span>
+                <div>
+                  <h2 id="locationCardTitle">I LIVE HERE</h2>
+                  <p data-parent-address>123 PETIFY Street, Quezon City, Philippines</p>
+                </div>
+              </div>
+
+              <div class="pet-location-card__map">
+                <iframe id="petLocationMap" title="Pet parent's address on Google Maps" src="https://www.google.com/maps?q=123+PETIFY+Street,+Quezon+City,+Philippines&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <a id="petDirectionsLink" class="btn btn--outline pet-location-card__directions" href="https://www.google.com/maps/dir/?api=1&origin=Current+Location&destination=123+PETIFY+Street,+Quezon+City,+Philippines" target="_blank" rel="noopener">Get Directions</a>
+              <p class="pet-location-card__hint">Google Maps may ask for your location. If it is unavailable, enter your starting point in Maps.</p>
+            </section>
           </div>
         </div>
       </div>
@@ -189,7 +205,7 @@
         <div class="profile-gallery__head">
           <p class="profile-page__eyebrow">PETIFY memories</p>
           <h2 id="profileGalleryTitle">Tintin's photo gallery</h2>
-          <p>Five ready-to-replace photo slots for your pet's favorite moments.</p>
+          <p>Four ready-to-replace photo slots for your pet's favorite moments.</p>
         </div>
 
         <!-- Replace each placeholder image source with a real pet photo. -->
@@ -198,7 +214,6 @@
           <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/FFF4D7/8C6300?text=Photo+2" alt="Placeholder photo slot 2"><figcaption>Photo 2</figcaption></figure>
           <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/E8F6ED/258043?text=Photo+3" alt="Placeholder photo slot 3"><figcaption>Photo 3</figcaption></figure>
           <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/FFF0F1/E5232B?text=Photo+4" alt="Placeholder photo slot 4"><figcaption>Photo 4</figcaption></figure>
-          <figure class="profile-gallery__item"><img src="https://placehold.co/900x900/F1EEFF/5A47A2?text=Photo+5" alt="Placeholder photo slot 5"><figcaption>Photo 5</figcaption></figure>
         </div>
 
         <aside class="emergency-contact" aria-labelledby="emergencyContactTitle">
